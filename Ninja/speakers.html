@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Outlines | Storytelling Ninja Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .speech-outline {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--yellow);
+        }
+        
+        .speech-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .speech-icon {
+            font-size: 2.5rem;
+            color: var(--blue);
+            background: rgba(0, 65, 101, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .speech-title {
+            color: var(--blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .speech-meta {
+            color: var(--maroon);
+            font-weight: 600;
+        }
+        
+        .monroe-step {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--yellow);
+        }
+        
+        .monroe-label {
+            font-weight: 600;
+            color: var(--maroon);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .activity-transition {
+            background: rgba(242, 223, 116, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            border-left: 4px solid var(--yellow);
+        }
+        
+        .activity-transition h4 {
+            color: var(--blue);
+            margin-bottom: 1rem;
+        }
+        
+        .speaker-bio {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .speaker-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--yellow);
+        }
+        
+        @media (max-width: 768px) {
+            .speech-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .speaker-bio {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">PR Pros Toastmasters</a>
+            <div class="nav-links">
+			
+				<a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#agenda">Agenda</a>
+                <a href="index.html#speeches">Speeches</a>
+                <a href="index.html#register" class="btn btn-nav">Register Now</a>
+				<a href="Speakers.html">Speech Outlines</a>
+				<a href="monroe.html">Monroe Motivated Sequence</a>
+			</div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 65, 101, 0.7), rgba(0, 65, 101, 0.7)), url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80'); min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Speaker Outlines</h1>
+            <p class="hero-subtitle">Monroe's Motivated Sequence in Action</p>
+        </div>
+    </section>
+
+    <!-- Speech Outlines Section -->
+    <section id="speeches" class="section">
+        <div class="container">
+            <h2 class="section-title">Speech Outlines & Activities</h2>
+            <p class="section-subtitle">Each speech follows Monroe's Motivated Sequence with a transition to practice activities</p>
+            
+            <!-- Speech 1 -->
+            <div class="speech-outline">
+                <div class="speech-header">
+                    <div class="speech-icon"><i class="fas fa-film"></i></div>
+                    <div>
+                        <h3 class="speech-title">The Hollywood Hook</h3>
+                        <p class="speech-meta">Speaker: Speaker One • Duration: 6 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">1. Attention</span>
+                    <p>"Picture a dark theater, popcorn in hand, when a single, hypnotic image—a ticking clock—flashes. Your heart races. Why? Great hooks grab you in seconds."</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">2. Need</span>
+                    <p>Most speakers lose audiences in the first 30 seconds with dull intros. Data: 80% of listeners tune out within a minute (Toastmasters International study).</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">3. Satisfaction</span>
+                    <p>Solution: A hypnotic hook uses vivid imagery, a question, or a bold statement. Example: "What if one sentence could make anyone listen?" Demo hooks for leadership and personal growth, showing variety.</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">4. Visualization</span>
+                    <p>"Imagine your next speech—every eye locked on you, hooked from your first word, eager for more."</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">5. Action</span>
+                    <p>Practice crafting hooks immediately with our interactive activity.</p>
+                </div>
+                
+                <div class="activity-transition">
+                    <h4>Activity 1: Hook Blitz (3–4 minutes)</h4>
+                    <p><strong>Objective:</strong> Practice crafting a gripping story hook.</p>
+                    <p><strong>Instructions:</strong> Write a one-sentence hook for "My career journey" and share in Zoom chat. We'll vote for the most hypnotic hook!</p>
+                    <p><strong>Example:</strong> "Have you ever wondered what one choice could change forever?"</p>
+                </div>
+                
+                <div class="speaker-bio">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Sarah Johnson" class="speaker-photo">
+                    <div>
+                        <h4>About Speaker One</h4>
+                        <p>Speaker One is a PR professional with 10 years of experience crafting compelling narratives for Fortune 500 companies. She's won multiple Toastmasters speech contests with her signature attention-grabbing openings.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Speech 2 -->
+            <div class="speech-outline">
+                <div class="speech-header">
+                    <div class="speech-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div>
+                        <h3 class="speech-title">Emotional Espionage</h3>
+                        <p class="speech-meta">Speaker: Speaker Two • Duration: 6 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">1. Attention</span>
+                    <p>Share a viral ad: "A 30-second ad about a lost puppy had millions in tears—its hypnotic pull came from fear and love."</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">2. Need</span>
+                    <p>Speakers focus on facts, not feelings, losing engagement. Emotional stories are remembered 65% more than facts (Stanford research).</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">3. Satisfaction</span>
+                    <p>Use primal emotions (fear, desire, curiosity). Example: For a sales pitch, evoke curiosity: "What if this product doubled your productivity?" Analyze Google's "Reunion" ad and a Nike campaign for emotional variety.</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">4. Visualization</span>
+                    <p>"Picture your audience leaning in, eyes wide, as your story stirs their emotions, making your message unforgettable."</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">5. Action</span>
+                    <p>Now let's practice identifying and applying emotions to different topics.</p>
+                </div>
+                
+                <div class="activity-transition">
+                    <h4>Activity 2: Emotion Match (3–4 minutes)</h4>
+                    <p><strong>Objective:</strong> Practice linking emotions to speech topics.</p>
+                    <p><strong>Instructions:</strong> In breakout rooms, pick a speech topic and identify a primal emotion to weave into it. Example: "For 'Overcoming failure,' use fear: 'What if one mistake defined you?'"</p>
+                </div>
+                
+                <div class="speaker-bio">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Michael Chen" class="speaker-photo">
+                    <div>
+                        <h4>About Speaker Two</h4>
+                        <p>Speaker Two is a behavioral psychologist turned corporate trainer who specializes in emotional engagement strategies. His TEDx talk on emotional storytelling has over 2 million views.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Speech 3 -->
+            <div class="speech-outline">
+                <div class="speech-header">
+                    <div class="speech-icon"><i class="fas fa-sync-alt"></i></div>
+                    <div>
+                        <h3 class="speech-title">The Plot Twist Payoff</h3>
+                        <p class="speech-meta">Speaker: Speaker three • Duration: 6 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">1. Attention</span>
+                    <p>Share a story: "A speech ended, 'I quit my job.' Dull—until the speaker added, 'to climb Everest.' That hypnotic twist hooked us."</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">2. Need</span>
+                    <p>Weak endings make speeches forgettable, undermining the message.</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">3. Satisfaction</span>
+                    <p>Craft a plot twist ending that ties to your theme. Example: For leadership, end with, "The best leader? My 10-year-old daughter." Demo rewriting two dull endings to show contrast.</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">4. Visualization</span>
+                    <p>"Imagine your audience gasping, then applauding, as your twist lingers for days, inspiring action."</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">5. Action</span>
+                    <p>Let's transform some boring endings into hypnotic twists right now.</p>
+                </div>
+                
+                <div class="activity-transition">
+                    <h4>Activity 3: Twist Rewrite (3–4 minutes)</h4>
+                    <p><strong>Objective:</strong> Practice crafting surprise endings.</p>
+                    <p><strong>Instructions:</strong> Rewrite this generic ending with a hypnotic twist: "So, I learned to work hard." Share in Zoom chat. Example: "I learned to work hard—because my rival became my mentor."</p>
+                </div>
+                
+                <div class="speaker-bio">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Jamal Rodriguez" class="speaker-photo">
+                    <div>
+                        <h4>About Speaker Three</h4>
+                        <p>Speaker three is a former screenwriter who now trains executives in narrative structure. His "Plot Twist Method" has been featured in Forbes and Fast Company.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Speech 4 -->
+            <div class="speech-outline">
+                <div class="speech-header">
+                    <div class="speech-icon"><i class="fas fa-theater-masks"></i></div>
+                    <div>
+                        <h3 class="speech-title">Improv Storytelling</h3>
+                        <p class="speech-meta">Speaker: Speaker Four • Duration: 6 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">1. Attention</span>
+                    <p>"Two strangers weave a hypnotic story from random prompts—proof you can tell stories on the spot!"</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">2. Need</span>
+                    <p>Many fear improv, thinking storytelling needs a script, limiting spontaneity in speeches.</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">3. Satisfaction</span>
+                    <p>Improv builds listening, adaptability, and audience focus. Example: Toastmasters Table Topics hones quick storytelling. Demo a 30-second improv story and explain its structure.</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">4. Visualization</span>
+                    <p>"Imagine handling any speech or pitch curveball with a story that captivates, leaving your audience in awe."</p>
+                </div>
+                
+                <div class="monroe-step">
+                    <span class="monroe-label">5. Action</span>
+                    <p>Let's build an improv story together right now!</p>
+                </div>
+                
+                <div class="activity-transition">
+                    <h4>Activity 4: Improv Relay (3–4 minutes)</h4>
+                    <p><strong>Objective:</strong> Practice improvisational storytelling.</p>
+                    <p><strong>Instructions:</strong> We'll build a group story together. I'll start with: "The clock struck midnight, and the room vanished." Each person adds one sentence. No overthinking—just flow!</p>
+                </div>
+                
+                <div class="speaker-bio">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Priya Patel" class="speaker-photo">
+                    <div>
+                        <h4>About Speaker Four</h4>
+                        <p>Speaker Four is an improv comedy veteran who has performed with Second City. She now applies improv techniques to business communication through her company, Spontaneous Strategy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="index.html#register" class="btn">Register for Workshop</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h3>PR Pros Toastmasters</h3>
+                    <p>Master the art of public speaking and leadership in our supportive online community.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="https://prpros.toastmastersclubs.org/" target="_blank">Club Website</a>
+                    <a href="index.html">Workshop Home</a>
+                    <a href="index.html#register">Register</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PR Pros Toastmasters Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

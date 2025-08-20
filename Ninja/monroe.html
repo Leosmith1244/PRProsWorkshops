@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monroe's Motivated Sequence | PR Pros Toastmasters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sequence-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .sequence-step {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--yellow);
+            transition: transform 0.3s;
+        }
+        
+        .sequence-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--maroon);
+            margin-bottom: 1rem;
+        }
+        
+        .step-title {
+            color: var(--blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .pr-example {
+            background: rgba(0, 65, 101, 0.05);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            border-left: 3px solid var(--blue);
+        }
+        
+        .pr-example h4 {
+            color: var(--maroon);
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study {
+            background: rgba(119, 36, 50, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            border-left: 4px solid var(--maroon);
+        }
+        
+        .case-study h3 {
+            color: var(--blue);
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .case-study-step {
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .case-study-step h4 {
+            color: var(--maroon);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">PR Pros Toastmasters</a>
+            <div class="nav-links">
+			
+				<a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#agenda">Agenda</a>
+                <a href="index.html#speeches">Speeches</a>
+                <a href="index.html#register" class="btn btn-nav">Register Now</a>
+				<a href="Speakers.html">Speech Outlines</a>
+				<a href="monroe.html">Monroe Motivated Sequence</a>
+			</div>
+    </nav>
+	
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 65, 101, 0.7), rgba(0, 65, 101, 0.7)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Monroe's Motivated Sequence</h1>
+            <p class="hero-subtitle">The PR Professional's Persuasion Framework</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Speech Framework This Month</h2>
+            <p class="section-subtitle">Exploring Monroe's proven 5-step persuasive structure</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>This month at PR Pros Toastmasters, we're focusing on <strong>Monroe's Motivated Sequence</strong>, the gold standard for persuasive communication. Developed in the 1930s by Alan H. Monroe, this five-step structure is particularly powerful for PR professionals who need to craft messages that inspire action.</p>
+                    
+                    <p>Why are we focusing on this now? Because in public relations, we don't just share information—we <em>persuade</em>, we <em>influence</em>, and we <em>drive action</em>. Monroe's sequence gives us a hypnotic framework to do just that.</p>
+                    
+                    <div class="highlight-box">
+                        <h3>Perfect for PR Professionals</h3>
+                        <ul>
+                            <li><i class="fas fa-bullseye"></i> Craft compelling press releases and pitches</li>
+                            <li><i class="fas fa-users"></i> Influence stakeholder perceptions</li>
+                            <li><i class="fas fa-chart-line"></i> Drive measurable campaign outcomes</li>
+                            <li><i class="fas fa-microphone"></i> Deliver persuasive speeches and presentations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Public speaking">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sequence Steps -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">The 5 Steps of Monroe's Sequence</h2>
+            <p class="section-subtitle">How we're applying this framework in our speeches</p>
+            
+            <div class="sequence-container">
+                <div class="sequence-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Attention</h3>
+                    <p>Grab your audience immediately with a striking opening—a startling fact, provocative question, or vivid story.</p>
+                    <div class="pr-example">
+                        <h4>PR Application:</h4>
+                        <p>"Did you know 80% of press releases never get read past the headline?"</p>
+                    </div>
+                </div>
+                
+                <div class="sequence-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Need</h3>
+                    <p>Identify a problem your audience cares about. Create urgency by showing why this matters now.</p>
+                    <div class="pr-example">
+                        <h4>PR Application:</h4>
+                        <p>"Without media coverage, even the best products fail to reach their potential customers."</p>
+                    </div>
+                </div>
+                
+                <div class="sequence-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Satisfaction</h3>
+                    <p>Present your solution clearly. Show how it specifically addresses the need you've identified.</p>
+                    <div class="pr-example">
+                        <h4>PR Application:</h4>
+                        <p>"Our media pitching framework increases coverage by 300% by focusing on journalist needs."</p>
+                    </div>
+                </div>
+                
+                <div class="sequence-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Visualization</h3>
+                    <p>Help your audience see the future—either the benefits of your solution or consequences of inaction.</p>
+                    <div class="pr-example">
+                        <h4>PR Application:</h4>
+                        <p>"Imagine your product featured in every major industry publication—that's the power of strategic PR."</p>
+                    </div>
+                </div>
+                
+                <div class="sequence-step">
+                    <div class="step-number">5</div>
+                    <h3 class="step-title">Action</h3>
+                    <p>Give clear, specific steps your audience can take immediately. Make it easy to say "yes."</p>
+                    <div class="pr-example">
+                        <h4>PR Application:</h4>
+                        <p>"Start today—download our free pitching template and send your first story idea by noon."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Monroe's Sequence in Famous PR Campaigns</h2>
+            <p class="section-subtitle">How top brands use this framework to persuade millions</p>
+            
+            <div class="case-study">
+                <h3>Nike's "Just Do It" Campaign</h3>
+                <p>One of the most successful campaigns in history followed Monroe's sequence perfectly:</p>
+                
+                <div class="case-study-grid">
+                    <div class="case-study-step">
+                        <h4>Attention</h4>
+                        <p>Powerful visuals of athletes pushing limits with inspirational music</p>
+                    </div>
+                    <div class="case-study-step">
+                        <h4>Need</h4>
+                        <p>Tapped into universal desire to overcome limitations</p>
+                    </div>
+                    <div class="case-study-step">
+                        <h4>Satisfaction</h4>
+                        <p>Positioned Nike products as tools for achievement</p>
+                    </div>
+                    <div class="case-study-step">
+                        <h4>Visualization</h4>
+                        <p>Showed everyday people achieving extraordinary feats</p>
+                    </div>
+                    <div class="case-study-step">
+                        <h4>Action</h4>
+                        <p>"Just Do It" slogan urged immediate purchase</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study">
+                <h3>Dove's "Real Beauty" Campaign</h3>
+                <p>Changed beauty industry standards using Monroe's framework:</p>
+                
+                <div class="case-study-grid">
+                    <div class="case-study-step">
+                        <h4>Attention</h4>
+                        <p>Emotional stories of women's insecurities</p>
+                    </div>
+                    <div class="case-study-step">
+                        <h4>Need</h4>
+                        <p>Highlighted unrealistic beauty standards</p>
+                    </div>
+                    <div class="case-study-step">
+                        <h4>Satisfaction</h4>
+                        <p>Promoted self-esteem and inclusive products</p>
+                    </div>
+                    <div class="case-study-step">
+                        <h4>Visualization</h4>
+                        <p>Showed women feeling confident and empowered</p>
+                    </div>
+                    <div class="case-study-step">
+                        <h4>Action</h4>
+                        <p>Invited joining Self-Esteem Project</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Applying Monroe's Sequence in PR</h2>
+            <p class="section-subtitle">Where you can use this framework today</p>
+            
+            <div class="training-grid">
+                <div class="training-card">
+                    <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                    <h3>Press Releases</h3>
+                    <p>Structure your releases to grab attention and drive media coverage using the 5-step sequence.</p>
+                </div>
+                
+                <div class="training-card">
+                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Media Pitches</h3>
+                    <p>Persuade journalists to cover your story by following Monroe's proven structure.</p>
+                </div>
+                
+                <div class="training-card">
+                    <div class="card-icon"><i class="fas fa-microphone"></i></div>
+                    <h3>Client Presentations</h3>
+                    <p>Present your PR strategies in a way that compels clients to take action.</p>
+                </div>
+                
+                <div class="training-card">
+                    <div class="card-icon"><i class="fas fa-hashtag"></i></div>
+                    <h3>Social Campaigns</h3>
+                    <p>Create social media content that actually drives engagement and conversions.</p>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="speakers.html" class="btn">See This Month's Speeches</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h3>PR Pros Toastmasters</h3>
+                    <p>Master the art of persuasive communication in our supportive online community.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="https://prpros.toastmastersclubs.org/" target="_blank">Club Website</a>
+                    <a href="index.html">Workshop Home</a>
+                    <a href="speakers.html">Speech Outlines</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PR Pros Toastmasters Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
