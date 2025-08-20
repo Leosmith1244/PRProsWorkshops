@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR Pros Monthly Sessions - Workshops</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* === TOASTMASTERS BRAND COLORS === */
+        :root {
+            --maroon: #772432;
+            --blue: #004165;
+            --gray: #A9B2B1;
+            --yellow: #F2DF74;
+            --white: #FFFFFF;
+            --black: #000000;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: var(--white);
+            color: var(--black);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--blue);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--yellow);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px; /* Rounded corners for logo */
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .logo:hover {
+            background-color: rgba(242, 223, 116, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 65, 101, 0.9), rgba(0, 65, 101, 0.9)), 
+                        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 1rem;
+            text-align: center;
+            min-height: 80vh; /* Adjusted for better content visibility */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom-left-radius: 15px; /* Rounded corners for hero */
+            border-bottom-right-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Workshop Grid */
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            padding: 3rem 0;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .workshop-card {
+            background: white;
+            border: 2px solid var(--gray);
+            border-radius: 15px; /* More rounded corners */
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            color: var(--black);
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .workshop-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px; /* Thinner accent bar */
+            background: var(--blue);
+            transition: all 0.4s ease;
+        }
+
+        .workshop-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+            border-color: var(--yellow);
+        }
+
+        .workshop-card:hover::before {
+            background: var(--yellow);
+            height: 10px; /* Thicker on hover */
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--maroon);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .workshop-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .workshop-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--blue);
+            line-height: 1.3;
+        }
+
+        .workshop-card p {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-date {
+            font-weight: 600;
+            color: var(--maroon);
+            font-size: 0.95rem;
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--yellow);
+            color: var(--black);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 1.5rem;
+        }
+
+        .btn i {
+            margin-left: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background: #f8d94a;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--blue);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            border-top-left-radius: 15px; /* Rounded corners for footer */
+            border-top-right-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--yellow);
+        }
+
+        .footer-bottom {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 5rem 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .workshop-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+
+            .workshop-card {
+                padding: 2rem;
+            }
+
+            .card-icon {
+                font-size: 2.5rem;
+            }
+
+            .workshop-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .workshop-card p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">PR Pros Toastmasters</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>PR Pros Monthly Sessions</h1>
+            <p class="hero-subtitle">Elevate your public speaking and leadership skills with our specialized monthly workshops.</p>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section class="workshop-grid container">
+        <!-- Workshop 1: Become a Storytelling Ninja -->
+        <a href="ninja/index.html" class="workshop-card">
+            <div class="card-icon"><i class="fas fa-hat-wizard"></i></div>
+            <h2>Become a Storytelling Ninja</h2>
+            <p>Weaponize storytelling for speeches, pitches, and even flirting in this hypnotic workshop. Master Hollywood-style hooks, emotional triggers, and plot twists.</p>
+            <span class="card-date">September 18th, 2025</span>
+            <button class="btn">Learn More <i class="fas fa-arrow-right"></i></button>
+        </a>
+        
+        <!-- Workshop 2: Viral Fame Lab -->
+        <a href="viralfame/index.html" class="workshop-card">
+            <div class="card-icon"><i class="fas fa-fire"></i></div>
+            <h2>Viral Fame Lab: Crack the Code of Explosive Content</h2>
+            <p>Master the art of creating contagious content that spreads like wildfire and transforms your Toastmasters club's online presence.</p>
+            <span class="card-date">October 16th, 2025</span>
+            <button class="btn">Learn More <i class="fas fa-arrow-right"></i></button>
+        </a>
+
+        <!-- Workshop 3: The CEO Whisperer -->
+        <a href="ceo/index.html" class="workshop-card">
+            <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+            <h2>The CEO Whisperer: Personal Branding for the Ambitious</h2>
+            <p>Cultivate an executive presence, master influential communication, and build a personal brand that commands authority and opens doors.</p>
+            <span class="card-date">November 20th, 2025</span>
+            <button class="btn">Learn More <i class="fas fa-arrow-right"></i></button>
+        </a>
+
+        <!-- Workshop 4: Damage Control Dungeon -->
+        <a href="damagecontrol/index.html" class="workshop-card">
+            <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <h2>Damage Control Dungeon: Survive a PR Apocalypse</h2>
+            <p>Equip yourself with persuasive communication skills to handle PR crises using Toulmin’s Model of Argumentation.</p>
+            <span class="card-date">December 2025</span>
+            <button class="btn">Learn More <i class="fas fa-arrow-right"></i></button>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://prpros.toastmastersclubs.org/" target="_blank">Club Website</a>
+            <a href="https://www.toastmasters.org/" target="_blank">Toastmasters International</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PR Pros Toastmasters Club. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
