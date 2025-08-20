@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Fame Lab - PR Pros Toastmasters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* === TOASTMASTERS BRAND COLORS === */
+        :root {
+          --maroon: #772432;
+          --blue: #004165;
+          --gray: #A9B2B1;
+          --yellow: #F2DF74;
+          --white: #FFFFFF;
+          --black: #000000;
+        }
+
+        /* === BASE STYLES === */
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: 'Open Sans', sans-serif;
+          line-height: 1.6;
+          color: var(--black);
+          margin: 0;
+          padding: 0;
+          background: var(--white);
+          scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        .section {
+          padding: 5rem 0;
+        }
+
+        .section-dark {
+          background-color: #f8f9fa;
+        }
+
+        .section-title {
+          color: var(--blue);
+          font-size: 2.5rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+          position: relative;
+        }
+
+        .section-title:after {
+          content: '';
+          display: block;
+          width: 100px;
+          height: 4px;
+          background: var(--yellow);
+          margin: 1rem auto;
+        }
+
+        .section-subtitle {
+          text-align: center;
+          color: var(--maroon);
+          margin-bottom: 3rem;
+          font-size: 1.2rem;
+        }
+
+        .btn {
+          display: inline-block;
+          background: var(--yellow);
+          color: var(--black);
+          padding: 0.8rem 1.8rem;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.3s;
+          border: none;
+          cursor: pointer;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+          background: #f8d94a;
+        }
+
+        .btn i {
+          margin-left: 0.5rem;
+        }
+
+        .btn-nav {
+          padding: 0.5rem 1.5rem;
+          font-size: 0.9rem;
+        }
+
+        .btn-hero {
+          font-size: 1.2rem;
+          padding: 1rem 2.5rem;
+          margin-top: 2rem;
+        }
+
+        /* === NAVIGATION === */
+        nav {
+          background: var(--blue);
+          color: white;
+          padding: 1rem 2rem;
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--yellow);
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 1.5rem;
+          align-items: center;
+        }
+
+        .nav-links a {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s;
+          font-weight: 600;
+        }
+
+        .nav-links a:hover {
+          color: var(--yellow);
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+          background: linear-gradient(rgba(0, 65, 101, 0.7), rgba(0, 65, 101, 0.7)), 
+                      url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80');
+          background-size: cover;
+          background-position: center;
+          color: white;
+          padding: 8rem 1rem;
+          text-align: center;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .hero-content {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .hero h1 {
+          font-size: 3.5rem;
+          margin-bottom: 2rem;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+          line-height: 1.2;
+        }
+
+        .hero-subtitle {
+          font-size: 1.5rem;
+          max-width: 800px;
+          margin: 0 auto 3rem;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .hero-stats {
+          display: flex;
+          justify-content: center;
+          gap: 3rem;
+          margin: 3rem 0;
+        }
+
+        .stat-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .stat-number {
+          font-size: 3rem;
+          font-weight: 700;
+          font-family: 'Montserrat', sans-serif;
+          color: var(--yellow);
+        }
+
+        .stat-label {
+          font-size: 1.1rem;
+          font-weight: 600;
+        }
+
+        /* === ABOUT SECTION === */
+        .about-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+          align-items: center;
+        }
+
+        .about-text p {
+          margin-bottom: 1.5rem;
+          font-size: 1.1rem;
+          line-height: 1.7;
+        }
+
+        .highlight-box {
+          background: rgba(119, 36, 50, 0.1);
+          border-left: 4px solid var(--maroon);
+          padding: 1.5rem;
+          margin-top: 2rem;
+          border-radius: 8px;
+        }
+
+        .highlight-box h3 {
+          color: var(--maroon);
+          margin-bottom: 1rem;
+        }
+
+        .highlight-box ul {
+          list-style: none;
+        }
+
+        .highlight-box li {
+          margin-bottom: 0.8rem;
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+        }
+
+        .highlight-box i {
+          color: var(--blue);
+        }
+
+        .about-image img {
+          width: 100%;
+          border-radius: 8px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* === TRAINING GRID === */
+        .training-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 2.5rem;
+          margin-top: 4rem;
+        }
+
+        .training-card {
+          background: white;
+          border: 3px solid var(--yellow);
+          border-radius: 12px;
+          padding: 2.5rem;
+          text-align: center;
+          transition: all 0.4s;
+          color: var(--black);
+          text-decoration: none;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .training-card:hover {
+          background: var(--yellow);
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-icon {
+          font-size: 2.5rem;
+          color: var(--blue);
+          margin-bottom: 1.5rem;
+        }
+
+        .training-card h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          color: var(--blue);
+        }
+
+        .training-card p {
+          font-size: 1.1rem;
+          margin-bottom: 1.5rem;
+          color: var(--black);
+        }
+
+        .card-date {
+          font-weight: 600;
+          color: var(--maroon);
+          font-size: 1rem;
+        }
+
+        /* === TESTIMONIALS === */
+        .testimonials-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
+        }
+
+        .testimonial-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+          border-top: 4px solid var(--blue);
+          transition: transform 0.3s;
+        }
+
+        .testimonial-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .testimonial-quote {
+          font-style: italic;
+          margin-bottom: 1.5rem;
+          font-size: 1.1rem;
+          line-height: 1.7;
+        }
+
+        .testimonial-author {
+          font-weight: 600;
+          color: var(--maroon);
+        }
+
+        /* === REGISTER SECTION === */
+        .register-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+          margin-top: 3rem;
+        }
+
+        .register-info h3 {
+          color: var(--blue);
+          margin-bottom: 1.5rem;
+          font-size: 1.8rem;
+        }
+
+        .register-info ul {
+          list-style: none;
+          margin-bottom: 2rem;
+        }
+
+        .register-info li {
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 0.8rem;
+        }
+
+        .register-info li:before {
+          content: '•';
+          color: var(--yellow);
+          font-weight: bold;
+        }
+
+        .requirements {
+          background: rgba(255,255,255,0.8);
+          padding: 1.5rem;
+          border-radius: 8px;
+          border-left: 4px solid var(--yellow);
+        }
+
+        .requirements h4 {
+          color: var(--blue);
+          margin-bottom: 0.8rem;
+        }
+
+        .register-form {
+          background: white;
+          padding: 2rem;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .register-form h3 {
+          color: var(--blue);
+          margin-bottom: 1.5rem;
+          text-align: center;
+          font-size: 1.8rem;
+        }
+
+        .form-group {
+          margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select {
+          width: 100%;
+          padding: 1rem;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+          outline: none;
+          border-color: var(--blue);
+        }
+
+        /* === FOOTER === */
+        footer {
+          background: var(--blue);
+          color: white;
+          padding: 3rem 0 0;
+        }
+
+        .footer-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        .footer-brand h3 {
+          color: var(--yellow);
+          margin-bottom: 1rem;
+        }
+
+        .footer-links h3,
+        .footer-social h3 {
+          color: var(--yellow);
+          margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+          display: block;
+          margin-bottom: 0.8rem;
+          transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+          color: var(--yellow);
+        }
+
+        .social-icons {
+          display: flex;
+          gap: 1rem;
+        }
+
+        .social-icons a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background: rgba(255,255,255,0.1);
+          border-radius: 50%;
+          transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+          background: var(--yellow);
+          color: var(--black);
+        }
+
+        .footer-bottom {
+          text-align: center;
+          padding: 1.5rem;
+          margin-top: 2rem;
+          border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* === RESPONSIVE STYLES === */
+        @media (max-width: 992px) {
+          .about-content,
+          .register-container {
+            grid-template-columns: 1fr;
+          }
+          
+          .about-image {
+            order: -1;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero h1 {
+            font-size: 2.5rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1.2rem;
+          }
+          
+          .hero-stats {
+            flex-direction: column;
+            gap: 1.5rem;
+          }
+          
+          .nav-container {
+            flex-direction: column;
+            gap: 1rem;
+          }
+          
+          .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          
+          .section {
+            padding: 3rem 0;
+          }
+          
+          .section-title {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .training-grid {
+            grid-template-columns: 1fr;
+          }
+          
+          .hero {
+            padding: 6rem 1rem;
+          }
+          
+          .training-card {
+            padding: 1.5rem;
+          }
+        }
+
+        /* Additional Form Styles */
+        .hidden {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+        }
+
+        /* Style for checkbox label */
+        form label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .hidden {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+        }
+        /* Animation for cards */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .training-card, .testimonial-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .training-card:nth-child(1) { animation-delay: 0.1s; }
+        .training-card:nth-child(2) { animation-delay: 0.2s; }
+        .training-card:nth-child(3) { animation-delay: 0.3s; }
+        .training-card:nth-child(4) { animation-delay: 0.4s; }
+        .training-card:nth-child(5) { animation-delay: 0.5s; }
+        .training-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .testimonial-card:nth-child(1) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.4s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.6s; }
+
+        /* Page-specific styles */
+        .page-content {
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 2rem;
+        }
+
+        .content-card {
+          background: white;
+          border-radius: 8px;
+          padding: 2rem;
+          margin-bottom: 2rem;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .speech-card {
+          border-left: 4px solid var(--blue);
+          margin-bottom: 2rem;
+        }
+
+        .rhetoric-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          margin: 2rem 0;
+        }
+
+        .rhetoric-item {
+          background: white;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+          text-align: center;
+        }
+
+        .rhetoric-item h3 {
+          color: var(--blue);
+          margin-bottom: 1rem;
+        }
+
+        .ethos { border-top: 4px solid var(--blue); }
+        .pathos { border-top: 4px solid var(--maroon); }
+        .logos { border-top: 4px solid var(--yellow); }
+
+        .agenda-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 2rem 0;
+        }
+
+        .agenda-table th, .agenda-table td {
+          padding: 1rem;
+          text-align: left;
+          border-bottom: 1px solid #eee;
+        }
+
+        .agenda-table th {
+          background-color: var(--blue);
+          color: white;
+        }
+
+        .agenda-table tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+        .time-col {
+          width: 120px;
+          font-weight: 600;
+          color: var(--blue);
+        }
+
+        /* Form enhancements */
+        .floating-input, .floating-select {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .floating-input input, 
+        .floating-select select {
+            width: 100%;
+            padding: 1.5rem 1rem 0.5rem 3rem;
+            border: 2px solid var(--gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .floating-select select {
+            appearance: none;
+            padding-right: 2.5rem;
+        }
+
+        .floating-input label, 
+        .floating-select label {
+            position: absolute;
+            top: 0.8rem;
+            left: 3rem;
+            font-size: 0.8rem;
+            color: var(--blue);
+            transition: all 0.3s;
+            z-index: 1;
+        }
+
+        .floating-input input:focus,
+        .floating-select select:focus {
+            outline: none;
+            border-color: var(--yellow);
+            box-shadow: 0 0 0 3px rgba(242, 223, 116, 0.3);
+        }
+
+        .floating-input input:focus + label,
+        .floating-input input:not(:placeholder-shown) + label,
+        .floating-select select:focus + label,
+        .floating-select select:not([value=""]) + label {
+            top: 0.3rem;
+            font-size: 0.7rem;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--blue);
+            z-index: 1;
+        }
+
+        .select-arrow {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--blue);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Textarea Styles */
+        .textarea-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        .textarea-label i {
+            color: var(--yellow);
+        }
+
+        .optional-tag {
+            font-size: 0.7rem;
+            color: var(--gray);
+            font-weight: normal;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border: 2px solid var(--gray);
+            border-radius: 8px;
+            font-family: 'Open Sans', sans-serif;
+            resize: vertical;
+            transition: all 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--yellow);
+            box-shadow: 0 0 0 3px rgba(242, 223, 116, 0.3);
+        }
+
+        .character-count {
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+
+        /* Enhanced Checkbox */
+        .checkbox-cool {
+            margin: 2rem 0;
+        }
+
+        .checkbox-cool input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .checkbox-cool label {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+        }
+
+        .custom-checkbox {
+            width: 1.2rem;
+            height: 1.2rem;
+            border: 2px solid var(--blue);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .custom-checkbox::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 0.8rem;
+            color: white;
+            display: none;
+        }
+
+        .checkbox-cool input[type="checkbox"]:checked + label .custom-checkbox {
+            background: var(--blue);
+            border-color: var(--blue);
+        }
+
+        .checkbox-cool input[type="checkbox"]:checked + label .custom-checkbox::after {
+            display: block;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            background: var(--blue);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: var(--maroon);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-icon {
+            transition: transform 0.3s;
+        }
+
+        .btn-submit:hover .btn-icon {
+            transform: translateX(3px);
+        }
+
+        /* Form Footer */
+        .form-footer {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .form-footer i {
+            color: var(--yellow);
+        }
+
+        /* Form decorations */
+        .form-decoration {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 3rem;
+            color: var(--yellow);
+            z-index: 0;
+        }
+
+        .form-star {
+            top: -1rem;
+            right: -1rem;
+            transform: rotate(20deg);
+        }
+
+        .form-mic {
+            bottom: 2rem;
+            left: -1rem;
+            font-size: 4rem;
+        }
+
+        .register-form {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Smooth scrolling for the jump */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Highlight the form when scrolled to */
+        .register-form:target {
+            animation: highlight 2s ease;
+        }
+        
+        @keyframes highlight {
+            0% { background-color: white; }
+            50% { background-color: rgba(242, 223, 116, 0.2); }
+            100% { background-color: white; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">PR Pros Toastmasters</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="timeline.html">Agenda Timeline</a>
+                <a href="speakers.html">Speaker Guides</a>
+                <a href="rhetoric.html">Rhetorical Triangle</a>
+                <a href="#registration-form" class="btn btn-nav">Register Now</a>
+            </div>
+        </div>
+    </nav>
+	
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Viral Fame Lab: Crack the Code of Explosive Content</h1>
+            <p class="hero-subtitle">Master the art of creating contagious content that spreads like wildfire and transforms your Toastmasters club's online presence.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">90</span>
+                    <span class="stat-label">Minutes of Training</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Expert Speakers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Practical Strategies</span>
+                </div>
+            </div>
+            
+            <!-- Modified button to jump to registration form -->
+            <a href="#registration-form" class="btn btn-hero">Secure Your Spot <i class="fas fa-arrow-down"></i></a>
+		    </div>
+			 
+	</section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">About the Workshop</h2>
+            <p class="section-subtitle">Learn to create content that captivates, converts, and goes viral</p>
+             <p class="section-subtitle">October 16th 2025 • 7PM to 8:30PM Central Time • Online via Zoom</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>In today's digital landscape, creating content that stands out is more challenging than ever. The <strong>Viral Fame Lab</strong> workshop is designed specifically for Toastmasters members who want to amplify their club's online presence and attract new members through powerful, engaging content.</p>
+                    
+                    <p>Drawing on time-tested principles from Aristotle's Rhetorical Triangle and modern digital marketing strategies, this workshop will equip you with practical techniques to create content that resonates, engages, and spreads.</p>
+                    
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-bullseye"></i> What You'll Learn</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> The psychology behind viral content</li>
+                            <li><i class="fas fa-check"></i> How to hook viewers in just 3 seconds</li>
+                            <li><i class="fas fa-check"></i> Ethical clickbait techniques that work</li>
+                            <li><i class="fas fa-check"></i> How to leverage trending topics for maximum reach</li>
+                            <li><i class="fas fa-check"></i> Practical applications for Toastmasters promotion</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Workshop participants engaged in discussion">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Topics Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Workshop Topics</h2>
+            <p class="section-subtitle">Master the art of creating contagious content</p>
+            
+            <div class="training-grid">
+                <div class="training-card">
+                    <div class="card-icon"><i class="fas fa-stopwatch"></i></div>
+                    <h3>The 3-Second Rule</h3>
+                    <p>Learn why social media content gets skipped in 3 seconds and how to hook audiences using Aristotle's Rhetorical Triangle.</p>
+                    <p class="card-date">Speaker: VP of Public Relations</p>
+                </div>
+                
+                <div class="training-card">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Dopamine Hacks</h3>
+                    <p>Discover how to trigger shares by evoking outrage, awe, or FOMO using emotional marketing principles.</p>
+                    <p class="card-date">Speaker: Club President</p>
+                </div>
+                
+                <div class="training-card">
+                    <div class="card-icon"><i class="fas fa-clickbait"></i></div>
+                    <h3>The Dark Arts of Clickbait</h3>
+                    <p>Master ethical clickbait techniques to create irresistible headlines for Toastmasters posts.</p>
+                    <p class="card-date">Speaker: Club Secretary</p>
+                </div>
+                
+                <div class="training-card">
+                    <div class="card-icon"><i class="fas fa-trending-up"></i></div>
+                    <h3>Trend-Jacking Olympics</h3>
+                    <p>Learn how to leverage trending memes or topics to promote Toastmasters and increase engagement.</p>
+                    <p class="card-date">Speaker: VP of Education</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">What Members Say</h2>
+            <p class="section-subtitle">Hear from Toastmasters who've transformed their content strategy</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The Viral Fame Lab completely changed how I approach our club's social media. We've doubled our engagement in just one month!"</p>
+                    <p class="testimonial-author">- Sarah J., VP Public Relations</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"I never understood why some content goes viral until this workshop. The Rhetorical Triangle framework is a game-changer!"</p>
+                    <p class="testimonial-author">- Michael T., Club President</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The practical activities made all the difference. I walked away with actionable strategies I could implement immediately."</p>
+                    <p class="testimonial-author">- Jennifer L., Secretary</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section with ID for the jump target -->
+    <section id="registration-form" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Ready to Go Viral?</h2>
+            <p class="section-subtitle">Join us for this transformative workshop</p>
+            
+            <div class="register-container">
+                <div class="register-info">
+                    <h3>Workshop Details</h3>
+                    <ul>
+                        <li><strong>Date:</strong> October 2025</li>
+                        <li><strong>Time:</strong> 90-minute intensive workshop</li>
+                        <li><strong>Platform:</strong> Online via Zoom</li>
+                        <li><strong>Word of the Day:</strong> Contagious</li>
+                    </ul>
+                    
+                    <div class="requirements">
+                        <h4>Who Should Attend</h4>
+                        <p>This workshop is perfect for Toastmasters members involved in club leadership, public relations, or anyone looking to enhance their content creation skills for personal or professional growth.</p>
+                    </div>
+                    
+                    <a href="register.html" class="btn">Register Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="register-form">
+                    <h3>Get Notified When Registration Opens</h3>
+                    <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <div class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </div>
+                        
+                        <div class="form-group floating-input">
+                            <input type="text" name="full-name" id="full-name" placeholder=" " required>
+                            <label for="full-name">Full Name</label>
+                            <div class="input-icon"><i class="fas fa-user"></i></div>
+                        </div>
+                        
+                        <div class="form-group floating-input">
+                            <input type="email" name="email" id="email" placeholder=" " required>
+                            <label for="email">Email Address</label>
+                            <div class="input-icon"><i class="fas fa-envelope"></i></div>
+                        </div>
+                        
+                        <div class="form-group floating-select">
+                            <select name="membership-status" id="membership-status" required>
+                                <option value="" disabled selected></option>
+                                <option value="member">Yes, I'm a PR Pros member</option>
+                                <option value="guest">No, I'm a guest</option>
+                            </select>
+                            <label for="membership-status">Are you a PR Pros member?</label>
+                            <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+						<!-- Cool Textarea Section -->
+        <div class="form-group">
+            <label for="additional-info" class="textarea-label">
+                <i class="fas fa-comment-dots"></i> Anything else we should know?
+                <span class="optional-tag">(optional)</span>
+            </label>
+            <textarea name="additional-info" id="additional-info" placeholder="Special requests, accessibility needs, or what you hope to learn..."></textarea>
+            <div class="character-count"><span id="char-count">0</span>/200</div>
+        </div>
+                        
+                        <div class="form-group checkbox-cool">
+                            <input type="checkbox" name="communication-consent" id="communication-consent" required>
+                            <label for="communication-consent">
+                                <span class="custom-checkbox"></span>
+                                I agree to receive communications about this workshop
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-submit">
+                            <span class="btn-text">Join Waitlist</span>
+                            <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                        </button>
+                        
+                        <div class="form-footer">
+                            <i class="fas fa-lock"></i> Your information is protected and will only be used for this event.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>PR Pros Toastmasters</h3>
+                <p>Master the art of public relations and persuasive communication through practical experience and expert guidance.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="agenda.html">Workshop Agenda</a>
+                <a href="speakers.html">Speaker Guides</a>
+                <a href="rhetoric.html">Rhetorical Triangle</a>
+                <a href="register.html">Register</a>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 PR Pros Toastmasters. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation and character count for textarea
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.querySelector('textarea');
+            if (textarea) {
+                const charCount = document.getElementById('char-count');
+                textarea.addEventListener('input', function() {
+                    charCount.textContent = this.value.length;
+                });
+            }
+            
+            // Form validation
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    let valid = true;
+                    const required = this.querySelectorAll('[required]');
+                    
+                    required.forEach(field => {
+                        if (!field.value.trim()) {
+                            valid = false;
+                            field.style.borderColor = 'red';
+                        } else {
+                            field.style.borderColor = '';
+                        }
+                    });
+                    
+                    if (!valid) {
+                        e.preventDefault();
+                        alert('Please fill in all required fields.');
+                    }
+                });
+            });
+            
+            // Check if we need to scroll to the form (if URL has #registration-form hash)
+            if (window.location.hash === '#registration-form') {
+                const formSection = document.getElementById('registration-form');
+                if (formSection) {
+                    setTimeout(() => {
+                        formSection.scrollIntoView({behavior: 'smooth'});
+                    }, 100);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

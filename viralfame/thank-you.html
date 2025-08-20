@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmed | Viral Fame Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific styles for this thank-you page */
+        .confirmation-box {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 6px solid var(--yellow); /* Consistent with Toastmasters branding */
+        }
+        
+        .confirmation-icon {
+            font-size: 4rem;
+            color: var(--maroon); /* Toastmasters maroon */
+            margin-bottom: 2rem;
+        }
+        
+        .next-steps {
+            text-align: left;
+            max-width: 600px;
+            margin: 3rem auto 0;
+            list-style: none; /* Remove default list styling */
+            padding-left: 0;
+        }
+        
+        .next-steps li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .next-steps i {
+            color: var(--blue); /* Toastmasters blue */
+            margin-top: 0.3rem;
+            font-size: 1.2rem;
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+
+        .thank-you-hero {
+            background-image: linear-gradient(rgba(0, 65, 101, 0.7), rgba(0, 65, 101, 0.7)), url('https://images.unsplash.com/photo-1510519153177-f2730a473079?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1469&h=979&fit=crop'); /* Re-using hero image from index.html */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+            min-height: 40vh; /* Shorter hero for thank you page */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thank-you-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .thank-you-hero .hero-subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive adjustments for thank you page */
+        @media (max-width: 768px) {
+            .confirmation-box {
+                padding: 1.5rem;
+            }
+            .confirmation-icon {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+            .next-steps {
+                margin: 2rem auto 0;
+            }
+            .next-steps li {
+                font-size: 1rem;
+                gap: 0.8rem;
+            }
+            .next-steps i {
+                font-size: 1.1rem;
+            }
+            .thank-you-hero h1 {
+                font-size: 2.2rem;
+            }
+            .thank-you-hero .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (re-using existing navigation structure) -->
+    <nav>
+        <div class="nav-container container">
+            <a href="index.html" class="logo">PR Pros Toastmasters</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="timeline.html">Agenda & Timeline</a>
+                <a href="speakers.html">Speakers</a>
+                <a href="rhetorical-triangle.html">Rhetorical Triangle</a>
+                <a href="index.html#register" class="btn btn-nav">Register Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section for Thank You Page -->
+    <section class="thank-you-hero">
+        <div class="hero-content">
+            <h1>Registration Confirmed! 🎉</h1>
+            <p class="hero-subtitle">You're officially signed up for the "Viral Fame Lab" workshop.</p>
+        </div>
+    </section>
+
+    <!-- Confirmation Section -->
+    <section class="section">
+        <div class="container">
+            <div class="confirmation-box">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2 class="section-title" style="margin-bottom: 1rem;">Get Ready to Go Viral!</h2>
+                <p class="section-subtitle" style="margin-bottom: 2rem;">
+                    **October 2025** • **90 Minutes** • **Online via Zoom**
+                </p>
+                
+                <p>We're thrilled to have you join us for **Viral Fame Lab**! You'll receive a confirmation email shortly with all the important details, including the Zoom link and pre-workshop materials. Please check your spam or junk folder if it doesn't arrive within 24 hours.</p>
+                
+                <div class="next-steps">
+                    <h3>What Happens Next?</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope-open-text"></i> **Keep an Eye on Your Inbox:** We'll send a reminder email closer to the workshop date with the final Zoom link and any last-minute tips.</li>
+                        <li><i class="fas fa-calendar-plus"></i> **Add to Your Calendar:** Don't forget to mark your calendar for **October 2025** to ensure you don't miss this opportunity.</li>
+                        <li><i class="fas fa-book-reader"></i> **Explore Our Resources:** Dive into the <a href="rhetorical-triangle.html" style="color: var(--blue); font-weight: 600;">Rhetorical Triangle page</a> and <a href="speakers.html" style="color: var(--blue); font-weight: 600;">Speaker Outlines</a> to get a head start!</li>
+                        <li><i class="fas fa-share-alt"></i> **Spread the Word:** Know someone else who wants to crack the code of explosive content? Share our workshop link!</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <a href="index.html" class="btn">Back to Workshop Home</a>
+                    <a href="timeline.html" class="btn" style="margin-left: 1rem; background-color: var(--maroon); color: white;">View Full Agenda</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (re-using existing footer structure) -->
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <h3>PR Pros Toastmasters</h3>
+                <p>Empowering communicators to create contagious content.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="timeline.html">Agenda & Timeline</a>
+                <a href="speakers.html">Speakers</a>
+                <a href="rhetoric">Rhetorical Triangle</a>
+                <a href="index.html#register">Register</a>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com/PRProsToastmasters" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/PRProsTM" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/company/PRProsToastmasters" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/PRProsToastmasters" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PR Pros Toastmasters. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

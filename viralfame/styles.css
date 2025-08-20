@@ -1,0 +1,1011 @@
+/* === TOASTMASTERS BRAND COLORS === */
+:root {
+  --maroon: #772432;
+  --blue: #004165;
+  --gray: #A9B2B1;
+  --yellow: #F2DF74;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+/* === BASE STYLES === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-dark {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  color: var(--blue);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: var(--yellow);
+  margin: 1rem auto;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--maroon);
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background: #f8d94a;
+}
+
+.btn i {
+  margin-left: 0.5rem;
+}
+
+.btn-nav {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-hero {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  margin-top: 2rem;
+}
+
+/* === NAVIGATION === */
+nav {
+  background: var(--blue);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--yellow);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+/* === HERO SECTION === */
+.hero {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 8rem 1rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--yellow);
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* === ABOUT SECTION === */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.highlight-box {
+  background: rgba(119, 36, 50, 0.1);
+  border-left: 4px solid var(--maroon);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.highlight-box h3 {
+  color: var(--maroon);
+  margin-bottom: 1rem;
+}
+
+.highlight-box ul {
+  list-style: none;
+}
+
+.highlight-box li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.highlight-box i {
+  color: var(--blue);
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* === TRAINING GRID === */
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.training-card {
+  background: white;
+  border: 3px solid var(--yellow);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.4s;
+  color: var(--black);
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.training-card:hover {
+  background: var(--yellow);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+}
+
+.training-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--blue);
+}
+
+.training-card p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.card-date {
+  font-weight: 600;
+  color: var(--maroon);
+  font-size: 1rem;
+}
+
+/* === TESTIMONIALS === */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--blue);
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--maroon);
+}
+
+/* === REGISTER SECTION === */
+.register-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.register-info h3 {
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.register-info ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.register-info li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.register-info li:before {
+  content: '•';
+  color: var(--yellow);
+  font-weight: bold;
+  margin-right: 0.5rem; /* Adjust space between bullet and text */
+}
+
+.requirements {
+  background: rgba(255,255,255,0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--yellow);
+}
+
+.requirements h4 {
+  color: var(--blue);
+  margin-bottom: 0.8rem;
+}
+
+.register-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.register-form h3 {
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+/* === FOOTER === */
+footer {
+  background: var(--blue);
+  color: white;
+  padding: 3rem 0 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-brand h3 {
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  color: var(--yellow);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 992px) {
+  .about-content,
+  .register-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    padding: 6rem 1rem;
+  }
+  
+  .training-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Additional Form Styles */
+.hidden {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+/* Style for checkbox label */
+form label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+.hidden {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+/* Animation for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.training-card, .testimonial-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.training-card:nth-child(1) { animation-delay: 0.1s; }
+.training-card:nth-child(2) { animation-delay: 0.2s; }
+.training-card:nth-child(3) { animation-delay: 0.3s; }
+.training-card:nth-child(4) { animation-delay: 0.4s; }
+.training-card:nth-child(5) { animation-delay: 0.5s; }
+.training-card:nth-child(6) { animation-delay: 0.6s; }
+
+.testimonial-card:nth-child(1) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.4s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Speaker Page Specific Styles */
+.speaker-card {
+    display: flex;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+    align-items: flex-start;
+}
+
+.speaker-card:nth-child(even) {
+    flex-direction: row-reverse; /* Alternate image and text for better flow */
+}
+
+.speaker-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--yellow);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.speaker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker-content {
+    flex-grow: 1;
+}
+
+.speaker-content h3 {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.speaker-content h4 {
+    color: var(--maroon);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.speaker-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.speech-outline {
+    background: #e9ecef;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--maroon);
+}
+
+.speech-outline h4 {
+    color: var(--blue);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.speech-outline ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.speech-outline ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.speech-outline ul li:before {
+    content: '\f0da'; /* Font Awesome right arrow icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--yellow);
+}
+
+.speech-outline ul ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+.speech-outline ul ul li:before {
+    content: '\f111'; /* Font Awesome circle icon */
+    font-size: 0.7rem;
+    top: 0.4rem;
+    color: var(--blue);
+}
+
+/* Rhetorical Triangle Page Specific Styles */
+.content-block {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+}
+
+.content-block h3 {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-block h4 {
+    color: var(--maroon);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.content-block p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.content-block ul, .content-block ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-block ul li, .content-block ol li {
+    margin-bottom: 0.8rem;
+}
+
+.example-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-bottom: 2rem;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.example-card h4 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+}
+
+.example-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.example-card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.example-card ul li:before {
+    content: '\f00c'; /* Checkmark icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--maroon);
+    font-size: 0.9rem;
+    top: 0.2rem;
+}
+
+.example-card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .speaker-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .speaker-card:nth-child(even) {
+        flex-direction: column; /* Ensure consistent column layout on small screens */
+    }
+    .speaker-image {
+        margin-bottom: 1.5rem;
+    }
+
+    .example-card {
+        padding: 1.5rem;
+    }
+}
+
+/* New Timeline Specific Styles (from example timeline.html) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--yellow); /* Changed to Toastmasters yellow */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 10px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--white); /* Toastmasters white */
+    border: 4px solid var(--maroon); /* Toastmasters maroon */
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--blue); /* Toastmasters blue */
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--blue);
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--blue); /* Toastmasters blue */
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--blue) transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--blue); /* Toastmasters blue */
+    position: relative;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+    color: var(--yellow); /* Toastmasters yellow */
+    margin-top: 0;
+}
+
+.timeline-date {
+    color: var(--yellow); /* Toastmasters yellow */
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-date i {
+    margin-right: 8px;
+}
+
+.timeline-badge {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -25px;
+    background-color: var(--maroon); /* Toastmasters maroon */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    top: 15px;
+    font-weight: bold;
+    box-shadow: 0 0 0 4px var(--yellow), inset 0 2px 0 rgba(0,0,0,0.1); /* Toastmasters yellow */
+}
+
+.right .timeline-badge {
+    left: -25px;
+}
+
+/* Specific styling for the cues within the timeline content */
+.timeline-content .timeline-cues {
+    background: rgba(242, 223, 116, 0.2); /* Light yellow background */
+    border-left: 4px solid var(--yellow);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.timeline-content .timeline-cues h4 {
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline-content .timeline-cues ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline-content .timeline-cues ul li {
+    margin-bottom: 0.3rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.timeline-content .timeline-cues ul li:before {
+    content: '\f058'; /* Font Awesome check-square */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--maroon);
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-container::before {
+        left: 60px;
+        border: medium solid var(--blue);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--blue) transparent transparent;
+    }
+
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    .timeline-badge {
+        left: 15px;
+    }
+
+    .right .timeline-badge {
+        left: 15px;
+    }
+}
+/* Example for speaker images */
+.speaker-image {
+    width: 200px; /* Set a specific width */
+    height: 200px; /* Set a specific height */
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Important for cropping */
+    border: 4px solid var(--yellow);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.speaker-image img {
+    width: 100%; /* Make the image fill its container's width */
+    height: 100%; /* Make the image fill its container's height */
+    object-fit: cover; /* This is the key for "cropping" */
+    /*
+        object-fit: cover; scales the image to fill the container,
+        maintaining its aspect ratio, and clips any excess.
+        This achieves a cropping effect.
+        
+        Other options:
+        - object-fit: contain; (scales down to fit, shows entire image, might leave empty space)
+        - object-fit: fill; (stretches/squashes to fill, might distort aspect ratio)
+        - object-fit: none; (displays intrinsic size, might overflow or be too small)
+        - object-fit: scale-down; (compares 'none' and 'contain' and uses smaller)
+    */
+}
